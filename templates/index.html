@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>AMATH Solver</h1>
+    <h3>by Prapat Suriyaphol</h3>
+    <br/>
+    <form method="POST" action = "/">
+        The supported operators are plus (+), minus (-), multiply (*) and divide (/).<br/>
+        Blank piece is not supported.<br/><br/>
+        An example of input is <span style="border:1px; border-style:solid; padding-right: 5px; padding-left: 5px; background-color: #E0E0E0;">1122238+-=</span><br/><br/>
+        The solution can take time about 5-10 seconds depending on the number of pieces. Please be patient.<br/>
+        I recommend not to put more than 9 pieces as shown in the example.<br/><br/>
+
+        Please enter your pieces for AMATH solver<br/>
+        <input type="text" name = "question">
+        <input type="submit" value="solve">
+    </form>
+    <br/>
+    your question is {{question}}<br/><br/>
+    your solutions are<br/>
+    {% for item in solution %}
+      {{item}}<br/>
+    {% endfor %}
+  </body>
+</html>
